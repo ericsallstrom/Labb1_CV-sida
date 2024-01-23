@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>Eric Sällström - Software Engineer</title>    
+</head>
+<body>
+    <header>
+        <nav id="nav-menu">        
+            <ul class="navbar">
+                <li><a href="/home.html"><img class="logo" src="/images/Untitled.png" alt="Logo"></a></li>
+                <li class="nav-item hideOnMobile"><a href="/home.html">Home</a></li>
+                <li class="nav-item hideOnMobile"><a class="menu-choice-open" href="/about.html">About</a></li>
+                <li class="nav-item hideOnMobile"><a href="/cv.html">CV</a></li>
+                <li class="nav-item hideOnMobile"><a href="/projects.html">Projects</a></li>
+                <li class="nav-item hideOnMobile"><a href="/contact.html">Contact</a></li>
+                <li class="hideOnDesktop" onclick=showSideBar()><a href="#"><i class="material-icons">menu</i></a></li>                
+            </ul>
+            <ul class="sidebar">
+                <li onclick=closeSideBar()><a href="#"><i class="material-icons">close</i></a></li>                  
+                <li class="nav-item"><a href="/home.html">Home</a></li>
+                <li class="nav-item"><a class="menu-choice-open" href="/about.html">About</a></li>
+                <li class="nav-item"><a href="/cv.html">CV</a></li>
+                <li class="nav-item"><a href="/projects.html">Projects</a></li>
+                <li class="nav-item"><a href="/contact.html">Contact</a></li>  
+                <li><a href="/home.html"><img class="logo" src="/images/Untitled.png" alt="Logo"></a></li>                                 
+            </ul>
+        </nav>
+    </header>
+    <main class="about-main">        
+        <section class="about-section">            
+            <h2 class="about-me-title">About me</h2>
+            <p>             
+                I'm Eric Sällström, a Software Engineer residing in Dalarna, Sweden. Currently pursuing my studies in
+                'System Development .NET' at Edugrade. Other than my role as a dedicated and prospective developer, I find joy 
+                in activities like snowboarding and cross country skiing as well as spending time with family and friends. 
+            </p>  
+            <br>           
+            <p>
+                As a developer, I'm inquisitive, meticulous, and ambitious. I thrive on challenges, constantly 
+                seeking opportunities for learning and growth within the ever-evolving world of technology.
+            </p>  
+            <br>        
+            <p>
+                Beyond the realm of System Development, my passion lies with music, particulary in the facets of music production and mixing. In 
+                my spare time, I contribute to the operation of running a recording studio alongside my family. This venture not only adds a another
+                creative dimension to my life but also marks the point where my love for technology seamlessly converges with the world of music.
+            </p>
+        </section>
+    </main>
+    <!-- <footer>
+        <a href="https://www.linkedin.com/in/eric-s%C3%A4llstr%C3%B6m-aa58a9231/" target="_blank">
+            <img class="social-links" src="images/LI-In-Bug.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/ericsallstrom" target="_blank">
+            <img class="social-links" src="images/github-mark-white.png" alt="GitHub">
+        </a>        
+    </footer> -->
+
+    <script>
+        function showSideBar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex'
+
+            // document.addEventListener('click', closeSideBarOnClickOutside);
+        }
+
+        function closeSideBar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none'
+
+            document.removeEventListener('click', closeSideBarOnClickOutside);
+        }
+
+        function closeSideBarOnClickOutside(event) {
+            const sidebar = document.querySelector('.sidebar');
+            const targetElement = event.target;
+
+            if (!sidebar.contains(targetElement)) {
+                sidebar.style.display = 'none';
+                document.removeEventListener('click', closeSideBarOnClickOutside);
+            }
+        }
+    </script>
+</body>
+</html>
