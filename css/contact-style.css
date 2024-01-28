@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'Satoshi-Variable';
+    src: url('/fonts/Satoshi/Satoshi-Variable.woff2') format('woff2'),
+         url('/fonts/Satoshi/Satoshi-Variable.woff') format('woff'),
+         url('/fonts/Satoshi/Satoshi-Variable.ttf') format('truetype');
+         font-weight: 300 900;
+         font-display: swap;
+         font-style: normal;
+  }
+
+* {
+    padding: 0;
+    margin: 0;  
+    box-sizing: border-box;     
+}
+
+/* Gäller för alla skärmstorlekar*/
+body {  
+    display: flex;
+    flex-direction: column;      
+    min-height: 100vh;          
+    font-family: 'Satoshi-Variable', 'Roboto Mono', sans-serif;
+    font-weight: 600;
+    /* background-color: #c6beac1b;     */
+    background-color: #e2d4ba;    
+    color: rgba(240, 238, 231, 0.784);     
+}
+
+.wrapper {
+    flex: 1;
+}
+
+main {
+    padding-top: 7em;
+    flex: 1;    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.contact-container {       
+    display: flex;          
+    justify-content: space-evenly;    
+    align-items: center;
+    gap: 8em;      
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;               
+    gap: 1.2em;            
+    background-color: #548d6cb9;      
+    box-shadow: 50px 200px 100px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;       
+    padding: 2em;
+    margin: 4em 0;    
+}
+
+.contact-title h2 {
+    text-transform: uppercase;
+    font-size: 28px;    
+    background-color: rgba(252, 205, 143, 0.791);  
+    color: #936d61;
+    padding: 10px 12px 10px 12px;
+    border-radius: 4px;        
+}
+
+.contact-inputs {    
+    width: 30em;  
+    height: 4em;
+    border: none;
+    outline: none;  
+    border-radius: 4px;
+    font-weight: 600;
+    color: #936d61;
+    padding-left: 1em;  
+}
+
+.contact-left textarea {    
+    height: 10.5em;
+    padding-top: 1em;        
+}
+
+.contact-inputs:focus {
+    border: 2px solid #936d61;
+}
+
+.contact-inputs::placeholder {
+    color: #936d61ad;
+}
+
+.contact-left button {
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;        
+    padding: 0.8em 2em;
+    align-items: center;
+    font-size: 1em;    
+    letter-spacing: 1.2px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(252, 205, 143, 0.791);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.8);
+    margin: auto;    
+    background-color: #936d61;
+    color: rgba(240, 238, 231, 0.897);
+    font-family: 'Satoshi-Variable', 'Roboto Mono', sans-serif;
+    transition: background-color 0.3s ease-in-out;
+    transition: opacity 0.3s;
+}
+
+.contact-left button:hover {        
+    background-color: rgba(32, 73, 94, 0.616);
+} 
+
+.contact-left button:active {
+    opacity: 0.7;
+}
+
+.contact-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;     
+    gap: 1.5em;         
+    margin: 0;
+}
+
+.contact-right img {
+    width: 150px;
+    height: 150px; 
+    border: 28px solid #c6beac5e;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 0;         
+    }
+
+    .contact-inputs {
+        width: 80vw;
+    }
+
+    .contact-left {
+        padding: 1.3em;
+        margin: 2em 0 0 0;
+    }
+
+    .contact-left button {
+        padding: 0.5em 1em;
+    }
+
+    .contact-right {
+        flex-direction: row;                
+        margin: 2em 0;
+    }
+
+    .contact-right img {
+        width: 60px;
+        height: 60px;
+        border: 8px solid #c6beac5e;
+    }
+}
+
+@media screen and (max-height: 670px) {
+    .contact-container {
+        margin: 1.2em 0;
+    }
+
+    .contact-left {
+        margin-top: 1em;
+    }
+
+    .contact-right {
+        margin: 0.6em;
+    }
+}

@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'Satoshi-Variable';
+    src: url('/fonts/Satoshi/Satoshi-Variable.woff2') format('woff2'),
+         url('/fonts/Satoshi/Satoshi-Variable.woff') format('woff'),
+         url('/fonts/Satoshi/Satoshi-Variable.ttf') format('truetype');
+         font-weight: 300 900;
+         font-display: swap;
+         font-style: normal;
+  }
+
+* {
+    padding: 0;
+    margin: 0;  
+    box-sizing: border-box;     
+}
+
+/* Gäller för alla skärmstorlekar*/
+body {  
+    display: flex;
+    flex-direction: column;      
+    min-height: 100vh;
+    font-family: 'Satoshi-Variable', 'Roboto Mono', sans-serif;
+    font-weight: 600;
+    background-color: #e2d4ba;    
+    color: rgba(240, 238, 231, 0.897);         
+}
+
+.wrapper {
+    flex: 1;
+}
+
+main {    
+    padding-top: 7em;
+    flex: 1;                     
+    display: flex;    
+    flex-direction: column;
+    align-items: center;           
+}
+
+#section {   
+    display: flex; 
+    flex-direction: column;    
+    margin: 4em 1em 4em;    
+    background-color: #548d6cb9;      
+    box-shadow: 50px 200px 100px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;       
+    padding: 2em;      
+}
+
+.content-container {
+    display: flex;  
+    flex-direction: column;          
+}
+
+.title-container {            
+    display: flex;
+    align-items: center;
+    gap: 20px;        
+    color: #47467a;  
+    margin-bottom: 0.2em;      
+}
+
+.hyphen {
+    border: 1px solid #47467a;
+    width: 14px;
+    margin: 5px -10px 0 0;    
+}
+
+.title-container h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.2em;        
+}
+
+.content-info {  
+    display: flex;
+    justify-content: space-between;                                
+    align-items: center;
+    gap: 8vw;         
+}
+
+.content-info h2 {
+    font-size: 1.6em; 
+    font-weight: 800;        
+    width: 100%;
+}
+
+.content-icon {
+    font-size: 6em; 
+    margin: auto;        
+}
+
+.popup-btn {   
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #936d61;
+    color: rgba(240, 238, 231, 0.897); 
+    padding: 0.8em;
+    font-size: 0.7em;    
+    letter-spacing: 1px;
+    border-radius: 8px;
+    border: 1px solid rgba(252, 205, 143, 0.791);
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.3);
+    margin: 2em 0 0 0;        
+    text-align: center;  
+
+    width: 170px;        
+    
+    transition: background-color 0.3s ease-in-out;
+    transition: opacity 0.3s;    
+}
+
+.close-btn {
+    margin-right: 0.4em;
+    width: auto;
+}
+
+.repo-btn {
+    width: 195px;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #ffffff;
+    margin: 1.8em 0 1em 0;    
+}
+
+.popup-btn:hover {        
+    background-color: rgba(32, 73, 94, 0.616);
+} 
+
+.popup-btn:active {
+    opacity: 0.7;
+}
+
+.popup {    
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;      
+}
+
+.popup-inner {
+    background-color: white;
+    padding: 24px 16px;
+    max-width: 768px;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.popup-inner h3 {
+    color: #6c6c6c;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.popup-inner p {
+    color: #7c7c7c;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.popup:target {
+    opacity: 1;
+    pointer-events: all;    
+}
+
+@media screen and (max-width: 1400px) {    
+    .content-icon {
+        font-size: 5em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #section {        
+        margin: 2em 0;        
+    }
+
+    .content-info {
+        gap: 20vw;        
+    }
+
+    .content-info h2 {
+        font-size: 1.5em;
+    }
+
+    .popup-btn {
+        font-size: 0.6em;
+        width: 150px;
+    }
+
+    .close-btn {
+        width: 60px;        
+    }
+
+    .repo-btn {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #section {
+        width: 80vw;
+    }    
+
+    .content-info {
+        display: block;        
+    }
+
+    .content-info h2 {
+        font-size: 1.3em;
+    }
+
+    .content-icon {
+        font-size: 3em;
+        padding: 15px 0 5px 0;        
+    }
+}

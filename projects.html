@@ -5,26 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />   
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a1d2ac0309.js" crossorigin="anonymous"></script>        
+    <link rel="stylesheet" type="text/css" href="css/projects-style.css">
+    <link rel="stylesheet" type="text/css" href="css/header&footer-style.css">
+    <title>Eric Sällström - Software Developer</title>    
 </head>
 <body>
-    <header>
-        <nav id="nav-menu">
-            <div>
-                <p class="nav-menu-name"><span>Eric</span> Sällström</p>
-                <div class="nav-menu-border"></div>
-                <p class="nav-menu-title">Software Engineer</p>
+    <div class="wrapper">
+        <header>
+            <nav id="nav-menu">        
+                <ul class="navbar">
+                    <li><a href="/index.html"><img class="logo" src="/images/LogoEric5.jpg" alt="Logo"></a></li>
+                    <li class="nav-item hideOnMobile"><a href="/index.html">Home</a></li>
+                    <li class="nav-item hideOnMobile"><a href="/about.html">About</a></li>
+                    <li class="nav-item hideOnMobile"><a href="/cv.html">CV</a></li>
+                    <li class="nav-item hideOnMobile"><a class="menu-choice-open" href="/projects.html">Projects</a></li>
+                    <li class="nav-item hideOnMobile"><a href="/contact.html">Contact</a></li>
+                    <li class="hideOnDesktop" onclick=showSideBar()><a href="#"><i class="material-icons">menu</i></a></li>                
+                </ul>
+                <ul class="sidebar">
+                    <li onclick=closeSideBar()><a href="#"><i class="material-icons">close</i></a></li>                  
+                    <li class="nav-item"><a href="/index.html">Home</a></li>
+                    <li class="nav-item"><a href="/about.html">About</a></li>
+                    <li class="nav-item"><a href="/cv.html">CV</a></li>
+                    <li class="nav-item"><a class="menu-choice-open" href="/projects.html">Projects</a></li>
+                    <li class="nav-item"><a href="/contact.html">Contact</a></li>                    
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="section">        
+                <div class="title-container">
+                    <hr class="hyphen">           
+                    <h1>Projects</h1>
+                </div>
+                <div class="content-container">
+                    <div class="content-info">
+                        <h2>Built a Database with Entity <br> Framework and SQL Server</h2>  
+                        <i class="fa-solid fa-database content-icon"></i>                       
+                        <!-- <span class="material-symbols-outlined content-img">database</span>                                                                 -->
+                    </div>
+                    <a href="#popup1" class="popup-btn">Press for more info</a>                                                          
+                </div> 
+                <hr>
+                <div class="content-container">
+                    <div class="content-info">
+                        <h2>Built a App For a Fictive <br> Bank - Group Project</h2> 
+                        <i class="fa-solid fa-money-check-dollar content-icon"></i>                        
+                        <!-- <span class="material-symbols-outlined content-img">savings</span>                                                                                             -->
+                    </div>
+                    <a href="#popup2" class="popup-btn">Press for more info</a>                                    
+                </div>                                                                                                          
+            </section>                                               
+        </main>
+
+        <div class="popup" id="popup1">
+            <div class="popup-inner">
+                <h3>Database with Entity Framework & SQL Server</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, esse velit 
+                    dolorum suscipit ipsa doloribus animi! Aliquid iure facilis cumque ut hic, 
+                    adipisci tenetur, ea sint beatae tempora quidem totam.
+                </p>
+                <a href="#" class="popup-btn close-btn">Close</a>
+                <a href="https://github.com/ericsallstrom/Labb4IndividuelltDatabasprojekt.git" target="_blank" 
+                    class="popup-btn repo-btn">Go to GitHub repository
+                </a>
             </div>
-            <ul>
-                <li><a href="/home.html">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/cv.html">CV</a></li>
-                <li><a class="menu-choice-open" href="/projects.html">Projects</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        </div>
+        <div class="popup" id="popup2">
+            <div class="popup-inner">
+                <h3>Bank App - Group Project</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, esse velit 
+                    dolorum suscipit ipsa doloribus animi! Aliquid iure facilis cumque ut hic, 
+                    adipisci tenetur, ea sint beatae tempora quidem totam.
+                </p>
+                <a href="#" class="popup-btn close-btn">Close</a>
+                <a href="https://github.com/ericsallstrom/BankApp_GroupProject.git" target="_blank" 
+                    class="popup-btn repo-btn">Go to GitHub repository
+                </a>
+            </div>
+        </div>
+    </div>
+  
+    <h2 class="social-media-text">Follow me on...<span class="material-symbols-outlined arrow">arrow_downward</span></h2>
+
+    <footer>         
+        <div class="name-copyright">
+            <p>Eric Sällström © <span class="hideOnMobile">| All Rights Reserved</span></p>
+        </div>  
+        <div class="social-links">            
+            <a href="https://www.linkedin.com/in/eric-s%C3%A4llstr%C3%B6m-aa58a9231/" target="_blank">
+                <img class="social-link" src="icons/linkedin-icon.png" alt="LinkedIn link">
+            </a>
+            <a href="https://github.com/ericsallstrom" target="_blank">
+                <img class="social-link" src="icons/github-icon.png" alt="GitHub link">
+            </a>
+        </div>                   
+        <div class="web-guidelines">
+            <a href="https://www.digg.se/webbriktlinjer/alla-webbriktlinjer" target="_blank">Web Guidelines</a>
+        </div>             
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

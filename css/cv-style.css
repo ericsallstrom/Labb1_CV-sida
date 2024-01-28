@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Satoshi-Variable';
+    src: url('/fonts/Satoshi/Satoshi-Variable.woff2') format('woff2'),
+         url('/fonts/Satoshi/Satoshi-Variable.woff') format('woff'),
+         url('/fonts/Satoshi/Satoshi-Variable.ttf') format('truetype');
+         font-weight: 300 900;
+         font-display: swap;
+         font-style: normal;
+  }
+
+* {
+    padding: 0;
+    margin: 0;  
+    box-sizing: border-box;     
+}
+
+/* Gäller för alla skärmstorlekar*/
+body {  
+    display: flex;
+    flex-direction: column;      
+    min-height: 100vh;
+    font-family: 'Satoshi-Variable', 'Roboto Mono', sans-serif;
+    font-weight: 600;
+    background-color: #e2d4ba;    
+    color: rgba(240, 238, 231, 0.897);         
+}
+
+.wrapper {
+    flex: 1;
+}
+
+main {    
+    padding-top: 7em;
+    flex: 1;                     
+    display: flex;    
+    flex-direction: column;
+    align-items: center;       
+}
+
+#section {       
+    margin: 4em 1em 4em;    
+    background-color: #548d6cb9;      
+    box-shadow: 50px 200px 100px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;       
+    padding: 1.5em;     
+}
+
+.cv-section {    
+    display: flex;              
+    align-items: flex-start;            
+    gap: 16vw;           
+}
+
+.title-container {            
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 8px;
+    color: #47467a;          
+}
+
+.hyphen {
+    border: 1px solid #47467a;
+    width: 14px;
+    margin: 5px -10px 0 0;    
+}
+
+.title-container h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.content {                    
+    margin-bottom: 1.5em;
+    width: 18vw;         
+}
+
+.content h2 {
+    font-size: 1.6em; 
+    font-weight: 800;
+    margin-bottom: 0.3em;   
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.year {
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #ffffff;
+    margin: 0 0 1em 0;    
+}
+
+@media screen and (max-width: 1024px) {
+    .cv-section {
+        flex-direction: column;               
+        gap: 0;
+    }
+
+    .cv-section p, .cv-section h2 {
+        width: 80vw;
+    }
+
+    .cv-section h2 {
+        line-height: 1.1em;
+    }
+
+    .title-container {
+        margin-bottom: 1em;
+    }
+
+    #section {
+        width: 62vw;
+    }
+
+    .content:first-child {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cv-section p, .cv-section h2 {
+        width: 60vw;
+    }
+
+    #section {
+        width: 80vw;  
+        margin: 2em 0;      
+    }
+}

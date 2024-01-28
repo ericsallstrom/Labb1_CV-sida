@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Satoshi-Variable';
+    src: url('/fonts/Satoshi/Satoshi-Variable.woff2') format('woff2'),
+         url('/fonts/Satoshi/Satoshi-Variable.woff') format('woff'),
+         url('/fonts/Satoshi/Satoshi-Variable.ttf') format('truetype');
+         font-weight: 300 900;
+         font-display: swap;
+         font-style: normal;
+  }
+
+* {
+    padding: 0;
+    margin: 0;  
+    box-sizing: border-box;      
+}
+
+/* Gäller för alla skärmstorlekar*/
+body {                
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;          
+    font-family: 'Satoshi-Variable', 'Roboto Mono', sans-serif;
+    font-weight: 600;
+    background-color: #e2d4ba; 
+    color: rgba(240, 238, 231, 0.897);   
+}
+
+.wrapper {
+    flex: 1;            
+}
+
+main {
+    padding-top: 7em;            
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;     
+}
+
+.about-section {     
+    margin: 4em 1em;            
+    width: 40vw;
+    background-color: #548d6cb9;      
+    box-shadow: 50px 200px 100px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;       
+    padding: 2em;
+}
+
+.about-me-title {
+    text-transform: uppercase;
+    font-size: 28px;
+    background-color: rgba(252, 205, 143, 0.791);  
+    color: #936d61;  
+    display: inline-block;    
+    padding: 10px 12px 10px 12px;
+    border-radius: 4px;  
+    margin: 0 0 20px -15px;       
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6em;
+}
+
+@media screen and (max-width: 1024px) {
+    .about-section {
+        width: 80vw;        
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about-section {
+        margin: 2em 0;        
+    }
+
+    .about-me-title {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Satoshi-Variable';
+    src: url('/fonts/Satoshi/Satoshi-Variable.woff2') format('woff2'),
+         url('/fonts/Satoshi/Satoshi-Variable.woff') format('woff'),
+         url('/fonts/Satoshi/Satoshi-Variable.ttf') format('truetype');
+         font-weight: 300 900;
+         font-display: swap;
+         font-style: normal;
+  }
+
+  html {
+    background: url(../images/katie-mcnabb-8AJuvX4hzws-unsplash.jpg) no-repeat center fixed;
+    background-size: cover;    
+  }
+
+* {
+    padding: 0;
+    margin: 0;  
+    box-sizing: border-box;     
+}
+
+/* Gäller för alla skärmstorlekar*/
+body {  
+    display: flex;
+    flex-direction: column;    
+    min-height: 100vh;          
+    font-family: 'Satoshi-Variable', 'Roboto Mono', sans-serif;
+    font-weight: 600;
+    background-color: #c6beac1b;    
+    color: rgba(240, 238, 231, 0.784);     
+}
+
+.wrapper {
+    flex: 1;
+}
+
+main {
+    padding-top: 16em;
+    flex: 1;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;       
+}
+
+section {        
+    margin: 0 4em;    
+    /* background-color: #548d6cb9;       */
+    background-color: #42464694;
+    box-shadow: 50px 200px 100px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;       
+    padding: 1.5em 0.8em;                    
+}
+
+section h1 span {
+    color: rgba(252, 205, 143, 0.928);  
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 1.6em;
+    }
+}
